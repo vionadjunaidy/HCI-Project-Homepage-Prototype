@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".dropdowncontent").hide();
+            $(".drop").click(function(){
+                $(this).next(".dropdowncontent").slideToggle("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <div class="sidebar">
+            <div class="exit" onclick=hideSidebar()>
+                <a href="#">
+                <i class='bx bx-x'></i>            
+                </a>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Home</button>
+            </div>
+    
+            <div class="dropdown">
+                <button class="drop">Restaurants
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <button class="drop">Recipes
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <button class="drop">Today's Pick
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Breakfast</a>
+                    <a href="#">Lunch</a>
+                    <a href="#">Dinner</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home">
+            <div class="dropdown">
+                <button class="drop">Home</button>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Restaurants
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Recipes
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Today's Pick
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Breakfast</a>
+                    <a href="#">Lunch</a>
+                    <a href="#">Dinner</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu" onclick=showSidebar()>
+            <a href="#">
+            <i class='bx bx-menu'></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="boxes">
+        <div class="restaurant">
+            <h2>Restaurants</h2>
+            <img src="https://i.pinimg.com/originals/cb/74/22/cb7422c2c2be0edba0c04da67266cc67.jpg">
+            <p>Get the best restaurant recommendations in town and choose whichever genre that suits your taste!</p>
+            <button class="button">Go Here!</button>
+        </div>
+        
+
+        <div class="recipe">
+            <h2>Recipes</h2>
+            <img src="https://www.antonio-carluccio.com/wp-content/uploads/2020/05/Chinese-Dishes-1536x1053.jpg">
+            <p>We help you to cook delicious food for your loved ones!</p>
+            <button class="button">Go Here!</button>
+        </div>
+
+        <div class="today">
+            <h2>Today's Pick</h2>
+            <img src="https://i1.wp.com/made-blog.com/wp-content/uploads/2019/09/Resep-Bubur-Ayam.png?resize=700%2C602&ssl=1">
+            <p>Don't know what to eat? Don't worry! Here are some of our editors' picks!</p>
+            <button class="button">Go Here!</button>
+        </div>
+    </div>
+
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    }
+</script>
+
+</body>
+</html>
